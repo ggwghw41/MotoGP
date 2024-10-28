@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/screen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>MotoGP</title>
+   
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            <img src="./img/Logo.png" alt="Logo">
+            <p>Moto<span>GP</span></p>
+        </div>
+        <span class="hamburger" onclick="toggleMenu()">&#9776;</span> <!-- Nút hamburger -->
+        <div class="nav-menu">
+            <ul>
+                <li><a href="http://127.0.0.1:3000/index.html">Home</a></li>
+                <li><a href="#">Hãng xe <i class="fa-solid fa-angle-down"></i></a>
+                    <div class="submenu">
+                        <ul >
+                            <li><a href="#">Honda</a></li>
+                            <li><a href="#">Yamaha</a></li>
+                            <li><a href="#">Kawasaki</a></li>
+                            <li><a href="#">BMW</a></li>
+                            <li><a href="#">Ducati</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Phụ kiện</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Hotline</a></li>
+                <li><a href="#">Đăng nhập</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="container-chitiet">
+        <div class="container-box">
+            <div class="row-chitiet">
+                <img id="main-image" src="./img/ct-1.jpg" alt="Main Image">
+                <div class="img-box">
+                    <div class="row-img">
+                        <img src="./img/ct-2.jpg" alt="" onclick="changeImage(this.src)">
+                    </div>
+                    <div class="row-img">
+                        <img src="./img/ct-3.jpg" alt="" onclick="changeImage(this.src)">
+                    </div>
+                    <div class="row-img">
+                        <img src="./img/ct-4.jpg" alt="" onclick="changeImage(this.src)">
+                    </div>
+                    <div class="row-img">
+                        <img src="./img/ct-5.jpg" alt="" onclick="changeImage(this.src)">
+                    </div>
+                    <div class="row-img">
+                        <img src="./img/ct-6.jpg" alt="" onclick="changeImage(this.src)">
+                    </div>
+                </div>
+            </div>
+            <div class="row-chitiet">
+                <div class="title-product">
+                    <h3>Ducati Panigale V4</h3>
+                    <p class="price">Giá xe: 936.900.000 <sup>VND</sup></p>
+                    <div class="start">
+                        <p>Đánh giá:</p>
+                        <div class="number-start">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p>Dung tích xe: 1000cc</p>
+                    <div class="btn-service" style="margin: 20px;">
+                        <button type="button">Đặt hàng</button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="info">
+        <div class="img-info">
+           <img src="./img/CHITIET.png" alt="">
+    
+        </div>
+       </section>
+       <section class="container-detait">
+        
+        <section class="mota">
+            <img src="./img/a-1.jpg" alt="">
+            <img src="./img/a-2.jpg" alt="" class="large">
+            <img src="./img/a-3.jpg" alt="" class="large" >
+            <img src="./img/a-4.jpg" alt="" class="large">
+            <img src="./img/a-5.jpg" alt="">
+            <img src="./img/a-6.jpg" alt="" class="large">
+        </section>
+        <section class="product-details">
+            <div class="product-details-show" onclick="toggleDetail('motorDetail')">
+                <div class="toggle-button">Chi tiết Động cơ</div>
+                    <div class="btns">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                
+            </div>
+            <div class="detail" id="motorDetail">
+                <p>Động cơ này sử dụng công nghệ tiên tiến nhất để cung cấp hiệu suất tối ưu và tiết kiệm nhiên liệu.</p>
+                <p>Thông số kỹ thuật:</p>
+                <ul>
+                    <li><strong>Động cơ:</strong> 1,103 cc L-Twin, Desmosedici Stradale</li>
+                    <li><strong>Công suất:</strong> 214 HP (157 kW) tại 13,000 RPM</li>
+                    <li><strong>Tiêu thụ nhiên liệu:</strong> 6.6 L/100 km</li>
+                    <li><strong>Mô men xoắn:</strong> 124 Nm tại 10,000 RPM</li>
+                    <li><strong>Hệ thống truyền động:</strong> 6 cấp, hộp số điện tử</li>
+                    <li><strong>Trọng lượng:</strong> 198 kg (bao gồm đầy bình xăng)</li>
+                    <li><strong>Tốc độ tối đa:</strong> 300 km/h</li>
+                </ul>
+            </div>
+        
+            <div class="product-details-show" onclick="toggleDetail('brakeDetail')">
+                <div class="toggle-button">Chi tiết Hệ thống phanh</div>
+                    <div class="btns">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                
+            </div>
+            <div class="detail" id="brakeDetail">
+                <p>Hệ thống phanh trên Ducati Panigale V4 được trang bị công nghệ tiên tiến với hiệu suất cao.</p>
+                <p>Thông số kỹ thuật:</p>
+                <ul>
+                    <li><strong>Phanh trước:</strong> Đĩa kép 330 mm với kẹp phanh 4 piston</li>
+                    <li><strong>Phanh sau:</strong> Đĩa đơn 245 mm với kẹp phanh 2 piston</li>
+                    <li><strong>Hệ thống ABS:</strong> ABS Bosch 9.1 MP</li>
+                </ul>
+            </div>
+           
+        <div class="product-details-show" onclick="toggleDetail('techDetail')">
+            <div class="toggle-button">Công nghệ và tính năng</div>
+            <div class="btns">
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+        </div>
+        <div class="detail" id="techDetail">
+            <ul>
+                <li><strong>Hệ thống điều khiển lực kéo:</strong> Hệ thống DTC (Ducati Traction Control) giúp kiểm soát độ bám đường.</li>
+                <li><strong>Hệ thống điều chỉnh lực phanh động cơ:</strong> EBC (Engine Brake Control) giúp kiểm soát lực phanh động cơ khi giảm tốc.</li>
+                <li><strong>Chế độ lái:</strong> Có các chế độ lái khác nhau như Sport, Touring, và Wet để phù hợp với điều kiện lái.</li>
+            </ul>
+        </div>
+    
+        <div class="product-details-show" onclick="toggleDetail('designDetail')">
+            <div class="toggle-button">Thiết kế</div>
+            <div class="btns">
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+        </div>
+        <div class="detail" id="designDetail">
+            <ul>
+                <li><strong>Kiểu dáng:</strong> Thiết kế khí động học, với các đường nét sắc cạnh, mang lại cảm giác thể thao và mạnh mẽ.</li>
+                <li><strong>Trọng lượng:</strong> Khoảng 198 kg (bao gồm đầy bình xăng), giúp tăng tính linh hoạt và khả năng điều khiển.</li>
+            </ul>
+        </div>
+    
+        <div class="product-details-show" onclick="toggleDetail('performanceDetail')">
+            <div class="toggle-button">Hiệu suất</div>
+            <div class="btns">
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+        </div>
+        <div class="detail" id="performanceDetail">
+            <ul>
+                <li><strong>Tốc độ tối đa:</strong> Khoảng 300 km/h.</li>
+                <li><strong>Tiêu thụ nhiên liệu:</strong> Khoảng 6.6 L/100 km.</li>
+            </ul>
+        </div>
+    
+        <div class="product-details-show" onclick="toggleDetail('priceDetail')">
+            <div class="toggle-button">Giá bán</div>
+            <div class="btns">
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+        </div>
+        <div class="detail" id="priceDetail">
+            <p>Giá của Ducati Panigale V4 có thể dao động tùy thuộc vào thị trường và trang bị kèm theo, nhưng thường nằm trong khoảng từ <strong>20.000 đến 25.000 USD</strong>.</p>
+        </div>
+        <div class="product-details-show" onclick="toggleDetail('SanXuatDetail')">
+            <div class="toggle-button">Sản xuất</div>
+            <div class="btns">
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+        </div>
+        <div class="detail" id="SanXuatDetail">
+            <p> Ducati là một hãng xe mô tô nổi tiếng, có trụ sở chính tại Bologna, Ý</p>
+        </div>
+           </section>
+       </section>
+       <section class="info">
+        <div class="img-info">
+           <img src="./img/GOIY.png" alt="">
+    
+        </div>
+       </section>
+       <section class="product">
+        <div class="product-card">
+            <div class="product-img">
+                <img src="./img/spnb-1.jpg" alt="">
+            </div>
+           <div class="product-title">
+            <h3>Ducati Panigale v4</h3>
+            <p>Giá bán: 936.900.000 <suP>VND</suP></p>
+            <div class="start">
+                <p>Đánh giá:</p>
+                <div class="number-start">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <p class="btns"><a href="">Xem chi tiết</a></p>
+           </div>
+        </div>
+        <div class="product-card">
+            <div class="product-img">
+                <img src="./img/spnb-2.jpg" alt="">
+            </div>
+            <div class="product-title">
+                <h3>Yamaha R1</h3>
+                <p>Giá bán:  378.000.000 <suP>VND</suP></p>
+                <div class="start">
+                    <p>Đánh giá:</p>
+                    <div class="number-start">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p class="btns"><a href="">Xem chi tiết</a></p>
+               </div>
+        </div>
+        <div class="product-card">
+            <div class="product-img">
+                <img src="./img/spnb-3.jpg" alt="">
+            </div>
+            <div class="product-title">
+                <h3>Honda CBR S100RR</h3>
+                <p>Giá bán: 1.003.000.000 <suP>VND</suP></p>
+                <div class="start">
+                    <p>Đánh giá:</p>
+                    <div class="number-start">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p class="btns"><a href="">Xem chi tiết</a></p>
+               </div>
+        </div>
+        <div class="product-card">
+            <div class="product-img">
+                <img src="./img/spnb-4.jpg" alt="">
+            </div>
+            <div class="product-title">
+                <h3>Kawasaki H2</h3>
+                <p>Giá bán: 1.299.000.000 <suP>VND</suP></p>
+                <div class="start">
+                    <p>Đánh giá:</p>
+                    <div class="number-start">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p class="btns"><a href="">Xem chi tiết</a></p>
+               </div>
+        </div>
+        <div class="product-card">
+            <div class="product-img">
+                <img src="./img/spnb-5.jpg" alt="">
+            </div>
+            <div class="product-title">
+                <h3>Suzuki GSX 1000RR</h3>
+                <p>Giá bán: 401.900.000 <suP>VND</suP></p>
+                <div class="start">
+                    <p>Đánh giá:</p>
+                    <div class="number-start">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p class="btns"><a href="">Xem chi tiết</a></p>
+                
+               </div>
+        </div>
+        <div class="product-card">
+            <div class="product-img">
+                <img src="./img/spnb-6.jpg" alt="">
+            </div>
+            <div class="product-title">
+                <h3>BMW S1000RR</h3>
+                <p>Giá bán: 1.099.900.000 <suP>VND</suP></p>
+                <div class="start">
+                    <p>Đánh giá:</p>
+                    <div class="number-start">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <p class="btns"><a href="">Xem chi tiết</a></p>
+               </div>
+        </div>
+       </section>
+   <footer>
+    <div class="nen"></div>
+    <div class="container">
+        
+        <div class="row">
+            <h3>Liên hệ</h3>
+            <p><i class="fa-solid fa-phone"></i> Hotline Sóc Trăng: <a href="">0924766133</a></p>
+            <p><i class="fa-solid fa-phone"></i> Hotline HCM: <a href="">0924766133</a></p>
+            <p><i class="fa-solid fa-envelope"></i> Email: <a href="">Nguyenthaitoan941@gmail.com</a></p>
+            <p><i class="fa-solid fa-globe"></i> Website: <a href="">http://motogp.com</a></p>
+        </div>
+        <div class="row">
+            <h3>SHOWROOM</h3>
+            <p><i class="fa-solid fa-house"></i> Showroom 1: Xóm Lớn, Mỹ Hương, Mỹ Tú, Sóc Trăng</p>
+            <p><i class="fa-solid fa-house"></i> Showroom 2: 415 Phạm Văn Đồng, phường Linh Đông, quận Thủ Đức, TP.HCM.( gần vòng xoay Kha Vạn Cân và Phạm Văn Đồng).</p>
+            
+        </div>
+        <div class="row">
+            <h3>Về MOTOGP</h3>
+            <p>Giới thiệu</p>
+            <p>Liên hệ</p>
+            <p>Quyền lợi & Lợi ích</p>
+            <p>Chính sách bảo mật</p>
+            <p>Điều khoản sử dụng</p>
+        </div>
+        <div class="row">
+            <h3>FANPAGE</h3>
+            <p><i class="fa-brands fa-facebook"></i></p>
+            <p><i class="fa-brands fa-instagram"></i></p>
+            <p><i class="fa-brands fa-tiktok"></i></p>
+            <p><i class="fa-brands fa-twitter"></i></p>
+        </div>
+    </div>
+    
+
+   </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>
